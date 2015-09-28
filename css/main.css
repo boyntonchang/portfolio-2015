@@ -198,3 +198,114 @@ li.active a:hover {
  letter-spacing: 0.5px;
 
 }
+
+/*------Responsive----------*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+ {
+   .main-body{
+    margin: 24px 0px;
+   }
+  .main-content ul, .main-content-list ul {
+    animation: fade 2s;
+    padding-left: 10px;
+}
+  .main-content ul li {
+    padding: 10px;
+    letter-spacing: 1.3px;
+}
+  .main-content .section-1, .main-content .section-2 {
+    flex: 1;
+    -webkit-flex: 1;
+    min-width: 160px;
+}
+  .top-header h3, .main-body h3 {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin: 0;
+}
+   .tab-links li.active{
+    border-bottom: 3px solid #4d4d4d;
+   }
+  .tab-links li:hover{
+    border-bottom: 3px solid #4d4d4d;
+   }
+    .tab-links {
+    display: flex;
+    display: -webkit-flex;
+    border-bottom: thin solid #4d4d4d;
+    padding: 0px 15px;
+}
+  .tab-links a {
+    padding: 0;
+    border-bottom: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4c4c4c;
+    transition: all linear 0.15s;
+    text-decoration: none;
+}
+  .tab-links li {
+    margin: 0px 5px;
+    list-style: none;
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+   padding: 1px;
+}
+  .tab-links a:hover {
+    /* border-bottom: 3px solid #cecece; */
+    text-decoration: none;
+    color: #cecece;
+}
+  li.active a, li.active a:hover {
+    background: #fff;
+    color: #4d4d4d;
+     border-bottom: none; 
+}
+  #nav-menu {
+    
+    top: 66px!important;
+    
+}
+  .arrow{
+   top: 20%!important;
+  }
+  .main-content .section-1 {
+    text-align: right;
+    border-right: thin solid #cecece;
+    padding-right: 20px!important;
+}
+  .section-1 button, .section-2 button {
+    
+    border-radius: 10px;
+    height: 6em;
+   margin-top: 1em;
+  
+  }
+  ul.tab-links.experience {
+    display: inline-block;
+}
+  .tab-links.experience  li {
+    margin: 0px 5px;
+    list-style: none;
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: center;
+    padding: 8px;
+    width: 47%;
+    float: left;
+}
+  .section-1 span {
+    margin-right: 10px;
+}
+  .section-2 span {
+    margin-left: 20px;
+}
+
+}
