@@ -13,6 +13,7 @@
  <script src="js/jquery-2.1.4.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-animate.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-touch.min.js"></script>
  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
  <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
  <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
@@ -52,17 +53,20 @@
       <div class="main-content">
 
 
-       <div class="container slider" ng-controller="slideCtrl as vm">
-        <div ng-repeat="slide in vm.slides" class="image-holder" ng-hide="!vm.isCurrentSlideIndex($index)">
-         <span class="slide-label">{{slide.description}}</span>
-         <img ng-src="images/{{slide.imgPath}}" class="slide">
-        </div>
-
-
+       <div class="container slider " ng-controller="slideCtrl as vm">
+        
+         <span ng-repeat="slide in vm.slides" class="slide-label" ng-hide="!vm.isCurrentSlideIndex($index)">{{slide.description}}</span>
+         
+          <img  ng-repeat="slide in vm.slides" ng-src="images/{{slide.imgPath}}" class="slide slide-animation nonDraggableImage" ng-hide="!vm.isCurrentSlideIndex($index)"
+         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()" >
+         
+       
 
 
         <a class="arrow prev" href="#" ng-click="vm.nextSlide()"></a>
         <a class="arrow next" href="#" ng-click="vm.prevSlide()"></a>
+        
+        
 
        </div>
 
@@ -75,15 +79,16 @@
 
        
        <div class="container slider" ng-controller="designCtrl as dm">
-        <div ng-repeat="design in dm.slidesDesign" class="image-holder" ng-hide="!dm.isCurrentSlideIndex($index)">
-         <span class="slide-label">{{design.description}}</span>
-         <img  ng-src="images/{{design.imgPath}}" class="slide">
-        </div>
-
-
+        
+         <span  ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" autocorrect=""class="slide-label">{{design.description}}</span>
+         <img   ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" ng-src="images/{{design.imgPath}}" class="slide slide-animation nonDraggableImage">
+         
+        
 
         <a class="arrow prev" href="#" ng-click="dm.nextSlide()"></a>
         <a class="arrow next" href="#" ng-click="dm.prevSlide()"></a>
+        
+
 
        </div>
 

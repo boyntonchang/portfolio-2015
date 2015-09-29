@@ -1,11 +1,9 @@
 'use strict';
 
-angular.module('app', ['ngAnimate'])
+angular.module('app', ['ngAnimate', 'ngTouch'])
     .controller('slideCtrl', slideCtrl)
-    .animation('.slide-animation', slideAnimation)
-
-
-    .controller('designCtrl', designCtrl);
+    .controller('designCtrl', designCtrl)
+    .animation('.slide-animation', slideAnimation);
     
 function slideCtrl($http) {
     var vm = this;
@@ -17,23 +15,27 @@ function slideCtrl($http) {
 
 
 
-    vm.currentIndex = 0;
+    vm.direction = 'left';
+        vm.currentIndex = 0;
 
-    vm.setCurrentSlideIndex = function (index) {
-        vm.currentIndex = index;
-    };
+        vm.setCurrentSlideIndex = function (index) {
+            vm.direction = (index > vm.currentIndex) ? 'left' : 'right';
+            vm.currentIndex = index;
+        };
 
-    vm.isCurrentSlideIndex = function (index) {
-        return vm.currentIndex === index;
-    };
+        vm.isCurrentSlideIndex = function (index) {
+            return vm.currentIndex === index;
+        };
 
-    vm.prevSlide = function () {
-        vm.currentIndex = (vm.currentIndex < vm.slides.length - 1) ? ++vm.currentIndex : 0;
-    };
+        vm.prevSlide = function () {
+            vm.direction = 'left';
+            vm.currentIndex = (vm.currentIndex < vm.slides.length - 1) ? ++vm.currentIndex : 0;
+        };
 
-    vm.nextSlide = function () {
-        vm.currentIndex = (vm.currentIndex > 0) ? --vm.currentIndex: vm.slides.length - 1;
-    };
+        vm.nextSlide = function () {
+            vm.direction = 'right';
+            vm.currentIndex = (vm.currentIndex > 0) ? --vm.currentIndex : vm.slides.length - 1;
+        };
 };
 
 
@@ -48,51 +50,66 @@ function designCtrl($http) {
 
 
 
-    dm.currentIndex = 0;
+    dm.direction = 'left';
+        dm.currentIndex = 0;
 
-    dm.setCurrentSlideIndex = function (index) {
-        dm.currentIndex = index;
-    };
+        dm.setCurrentSlideIndex = function (index) {
+            dm.direction = (index > dm.currentIndex) ? 'left' : 'right';
+            dm.currentIndex = index;
+        };
 
-    dm.isCurrentSlideIndex = function (index) {
-        return dm.currentIndex === index;
-    };
+        dm.isCurrentSlideIndex = function (index) {
+            return dm.currentIndex === index;
+        };
 
-    dm.prevSlide = function () {
-        dm.currentIndex = (dm.currentIndex < dm.slidesDesign.length - 1) ? ++dm.currentIndex : 0;
-    };
+        dm.prevSlide = function () {
+            dm.direction = 'left';
+            dm.currentIndex = (dm.currentIndex < dm.slides.length - 1) ? ++dm.currentIndex : 0;
+        };
 
-    dm.nextSlide = function () {
-        dm.currentIndex = (dm.currentIndex > 0) ? --dm.currentIndex: dm.slidesDesign.length - 1;
-    };
+        dm.nextSlide = function () {
+            dm.direction = 'right';
+            dm.currentIndex = (dm.currentIndex > 0) ? --dm.currentIndex : dm.slides.length - 1;
+        };
 };
 
 function slideAnimation() {
+
     return {
+     
         addClass: function (element, className, done) {
+            var scope = element.scope();
+
             if (className == 'ng-hide') {
-                TweenMax.to(element, 0.5, {
-                    left: -element.parent().width(),
-                    onComplete: done
-                });
-            } else {
+                var finishPoint = element.parent().width();
+                if(scope.direction !== 'right') {
+                    finishPoint = -finishPoint;
+                }
+             
+              
+                TweenMax.to(element, 0.5, {left: finishPoint, onComplete: done });
+            }
+            else {
                 done();
             }
         },
-        removeClass: function () {
+        removeClass: function (element, className, done) {
+            var scope = element.scope();
+
             if (className == 'ng-hide') {
                 element.removeClass('ng-hide');
 
-                TweenMax.set(element, {
-                    left: element.parent().width()
-                });
-                TweenMax.to(element, 0.5, {
-                    left: 0,
-                    onComplete: done
-                });
-            } else {
+                var startPoint = element.parent().width();
+                if(scope.direction === 'right') {
+                    startPoint = -startPoint;
+                }
+
+                TweenMax.set(element, { left: startPoint });
+                TweenMax.to(element, 0.5, {left: 0, onComplete: done });
+            }
+            else {
                 done();
             }
         }
-    }
+    };
 };
