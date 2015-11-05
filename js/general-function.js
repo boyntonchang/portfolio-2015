@@ -12,6 +12,20 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $('.subtabs .subtab-links a').on('click', function(e)  {
+        var currentAttrValue = $(this).attr('href');
+ 
+        // Show/Hide Tabs
+        $('.subtabs ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        $(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+});
+
 $(document).ready(function(){
             var $navMenu = $('#nav-menu');
             
@@ -21,6 +35,14 @@ $(document).ready(function(){
         });
     });
 
+$(function(){
+ var $list = $('.rightArticle li');
+ 
+if($list.text(' ')){
+ console.log('ccc');
+ $list.text('vvv');
+}
+});
 //Fancybox
 
 $(document).ready(function() {

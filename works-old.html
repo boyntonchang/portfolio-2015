@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title> Works</title>
+ <link rel="stylesheet" type="text/css" href="css/normalize.css">
+ <link rel="stylesheet" type="text/css" href="css/main.css">
+ <link rel="stylesheet" type="text/css" href="css/navigation.css">
+ <link rel="stylesheet" type="text/css" href="css/slider.css">
+ <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen">
+ <script src="js/jquery-2.1.4.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-animate.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-touch.min.js"></script>
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+ <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+ <script src="js/general-function.js"></script>
+ <script src="js/app.js"></script>
+</head>
+
+<body ng-app="app">
+ <div class="container">
+  <header id="masthead" class="main-header" role="banner">
+   <div class="main-header_inner">
+
+    <div id="nav-icon3">
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+
+    </div>
+
+   </div>
+
+  </header>
+
+  <div class="main-body">
+   <h3>Works</h3>
+   <div class="tabs">
+    <ul class="tab-links">
+     <li class="active"><a href="#tab1">UI / UX</a></li>
+     <li><a href="#tab2">DESIGN</a></li>
+     <li><a href="#tab3">FRONT END</a></li>
+     <li><a href="#tab4">MOTION</a></li>
+    </ul>
+
+    <div class="tab-content">
+     <div id="tab1" class="tab active">
+      <div class="main-content">
+
+
+       <div class="container slider " ng-controller="slideCtrl as vm">
+        
+         <span ng-repeat="slide in vm.slides" class="slide-label" ng-hide="!vm.isCurrentSlideIndex($index)">{{slide.description}}</span>
+         
+          <img  ng-repeat="slide in vm.slides" ng-src="images/{{slide.imgPath}}" class="slide slide-animation nonDraggableImage" ng-hide="!vm.isCurrentSlideIndex($index)"
+         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()" >
+         
+       
+
+
+        <a class="arrow prev" href="#" ng-click="vm.nextSlide()"></a>
+        <a class="arrow next" href="#" ng-click="vm.prevSlide()"></a>
+        
+        
+
+       </div>
+
+
+      </div>
+     </div>
+
+     <div id="tab2" class="tab">
+      <div class="main-content">
+
+       
+       <div class="container slider" ng-controller="designCtrl as dm">
+        
+         <span  ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" autocorrect=""class="slide-label">{{design.description}}</span>
+         <img   ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" ng-src="images/{{design.imgPath}}" class="slide slide-animation nonDraggableImage">
+         
+        
+
+        <a class="arrow prev" href="#" ng-click="dm.nextSlide()"></a>
+        <a class="arrow next" href="#" ng-click="dm.prevSlide()"></a>
+        
+
+
+       </div>
+
+      </div>
+     </div>
+
+     <div id="tab3" class="tab">
+      <div class="main-content">
+       <div class="section-1" style="border-right:none">
+        <form class="" action="http://vast-crag-6193.herokuapp.com/" method="get" target="_blank">
+         <button type="submit" class="buttonRed">SINGLE PAGE APPLICATION PROJECT</button>
+        </form>
+        <ul style="font-weight:600;margin-right:35px;">
+         <li>ANGULAR JS</li>
+         <li>NODE JS</li>
+         <li>MONGO DB</li>
+         <li>EXPRESS JS</li>
+        </ul>
+
+       </div>
+       <div class="section-2">
+
+        <form class="" action="http://nynjtc.herokuapp.com" method="get" target="_blank">
+         <button type="submit" class="buttonRed">NYNJTC MOBILE PROJECT</button>
+        </form>
+        <ul>
+         <li>IONIC FRAMEWORK</li>
+         <li>ANGULAR JS</li>
+         <li>UNDERSCORE JS</li>
+         <li>JSON</li>
+        </ul>
+
+       </div>
+      </div>
+     </div>
+
+     <div id="tab4" class="tab">
+      <div class="main-content">
+       <div class="section-1" style="border-right:none">
+
+        <a class="fancybox-media" href="http://vimeo.com/35119237" title="motion graphic demo movie" rel="group1">
+         <button type="submit" class="buttonRed">MOTION GRAPHICS PORTFOLIO</button>
+        </a>
+        <a class="fancybox-media" href="http://vimeo.com/26409169" title="promotion for cosmetic brand" rel="group2">
+         <button type="submit" class="buttonRed">PROMOTION FOR COSMETIC BRAND</button>
+        </a>
+       </div>
+       <div class="section-2">
+        <a class="fancybox-media" href="http://vimeo.com/31254059" title="promotion reel for church event" rel="group3">
+         <button type="submit" class="buttonRed">PROMOTION REEL FOR CHURCH EVENT</button>
+        </a>
+        <a class="fancybox-media" href="http://vimeo.com/35118402" title="promotion reel for lipstick brand" rel="group4">
+         <button type="submit" class="buttonRed">PROMOTION FOR LIPSTICK BRAND</button>
+        </a>
+
+       </div>
+
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div id="nav-menu" class="overlay-scale">
+  <div>
+   <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="skill.html">SKILLS</a></li>
+    <li><a href="experience.html">EXPERIENCES</a></li>
+    <li><a href="works.html">WORK</a></li>
+   </ul>
+  </div>
+
+ </div>
+ </div>
+</body>
+
+</html>

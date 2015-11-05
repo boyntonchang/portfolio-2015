@@ -13,7 +13,7 @@ ul, ol{
  }
 .main-header{
     width:100%;
-    height: 34px;
+    height: 0px;
    
 }
 /*---- hambutger menu------*/
@@ -29,6 +29,7 @@ ul, ol{
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
+ z-index: 200;
 }
 #nav-icon3 span{
   display: block;
@@ -99,13 +100,13 @@ ul, ol{
 
 #nav-menu{
     width: 100%;
-    height: 100vh;
+    height: 94vh;
     background-color: #fff;
   
     overflow: hidden;
     
     position: absolute;
-    top: 68px;
+    top: 18px;
     left: 0;
    
        
@@ -143,6 +144,7 @@ ul, ol{
 
 }
 #nav-menu div{
+ margin-top: 40px;
    
 }
 #nav-menu ul li a {

@@ -53,41 +53,123 @@
       <div class="main-content">
 
 
-       <div class="container slider " ng-controller="slideCtrl as vm">
-        
-         <span ng-repeat="slide in vm.slides" class="slide-label" ng-hide="!vm.isCurrentSlideIndex($index)">{{slide.description}}</span>
+
+       <div class="container flex-container" ng-controller="slideCtrl as vm">
+        <div class="subtabs flex-container" id="subtab_navi">
+         <ul class="subtab-links">
+          <li class="active"><a href="#subtab1">UWX</a></li>
+          <li><a href="#subtab2">NYNJTC</a></li>
+          <li><a href="#subtab3">100BEST</a></li>
+          <li><a href="#subtab4">CAMPUSVIEW</a></li>
+          <li><a href="#subtab5">DASHBOARD</a></li>
+          <li><a href="#subtab6">WIREFRAMES</a></li>
+         </ul>
+         <div class="subtab-content">
+          <div id="subtab1" class="subtab active">
+          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'UWX'">
+           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
+           <ul class="rightArticle">
+            <li>{{slide.description}}</li>
+            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
+            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
+            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
+           </ul>
+          </div>
+
+          
+         </div>
+         <div id="subtab2" class="subtab">
+          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'NYNJTC'">
+           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
+           <ul class="rightArticle">
+            <li>{{slide.description}}</li>
+            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
+            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
+            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
+           </ul </div>
+
+          
+          </div>
+          <div id="subtab3" class="subtab">
+          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'100BEST'">
+           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
+           <ul class="rightArticle">
+            <li>{{slide.description}}</li>
+            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
+            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
+            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
+           </ul </div>
+
+           
+          </div>
+         </div>
          
-          <img  ng-repeat="slide in vm.slides" ng-src="images/{{slide.imgPath}}" class="slide slide-animation nonDraggableImage" ng-hide="!vm.isCurrentSlideIndex($index)"
-         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()" >
+         <div id="subtab4" class="subtab">
+          <div class="imgHolder " ng-repeat="slide in vm.slides | filter:'CAMPUSVIEW'">
+           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
+           <ul class="rightArticle">
+            <li>{{slide.description}}</li>
+            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
+            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
+            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
+           </ul </div>
+
+           
+          </div>
+         </div>
          
-       
+         <div id="subtab5" class="subtab">
+          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'DASHBOARD'">
+           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
+           <ul class="rightArticle">
+            <li>{{slide.description}}</li>
+            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
+            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
+            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
+           </ul </div>
 
+           
+          </div>
+         </div>
+         
+         <div id="subtab6" class="subtab">
+          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'WIREFRAMES'">
+           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
+           <ul class="rightArticle">
+            <li>{{slide.description}}</li>
+            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
+            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
+            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
+           </ul </div>
 
-        <a class="arrow prev" href="#" ng-click="vm.nextSlide()"></a>
-        <a class="arrow next" href="#" ng-click="vm.prevSlide()"></a>
-        
-        
-
+           
+          </div>
+         </div>
+         
+         </div>
+        </div>
        </div>
-
-
       </div>
      </div>
+
+     </div>
+
+
 
      <div id="tab2" class="tab">
       <div class="main-content">
 
-       
+
        <div class="container slider" ng-controller="designCtrl as dm">
-        
-         <span  ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" autocorrect=""class="slide-label">{{design.description}}</span>
-         <img   ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" ng-src="images/{{design.imgPath}}" class="slide slide-animation nonDraggableImage">
-         
-        
+
+        <span ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" autocorrect="" class="slide-label">{{design.description}}</span>
+        <img ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" ng-src="images/{{design.imgPath}}" class="slide slide-animation nonDraggableImage">
+
+
 
         <a class="arrow prev" href="#" ng-click="dm.nextSlide()"></a>
         <a class="arrow next" href="#" ng-click="dm.prevSlide()"></a>
-        
+
 
 
        </div>
@@ -148,22 +230,24 @@
 
       </div>
      </div>
-    </div>
+<!--    </div>-->
    </div>
   </div>
- </div>
- <div id="nav-menu" class="overlay-scale">
-  <div>
-   <ul>
-    <li><a href="index.html">HOME</a></li>
-    <li><a href="skill.html">SKILLS</a></li>
-    <li><a href="experience.html">EXPERIENCES</a></li>
-    <li><a href="works.html">WORK</a></li>
-   </ul>
+
+
+
+  <div id="nav-menu" class="overlay-scale">
+   <div>
+    <ul>
+     <li><a href="index.html">HOME</a></li>
+     <li><a href="skill.html">SKILLS</a></li>
+     <li><a href="experience.html">EXPERIENCES</a></li>
+     <li><a href="works.html">WORK</a></li>
+    </ul>
+   </div>
+
   </div>
 
- </div>
- </div>
 </body>
 
 </html>

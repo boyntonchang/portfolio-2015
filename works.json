@@ -1,39 +1,244 @@
 {
-    "UIUX":[{"imgPath":"RA-1.jpg","description":"List View - Risk Analytics"},
-{"imgPath":"RA-2.jpg","description":"Risk View - Risk Analytics"},
-{"imgPath":"RA-3.jpg","description":"Popup View - Risk Analytics"},
-{"imgPath":"RA-4.jpg","description":"Detail View 1 - Risk Analytics"},
-{"imgPath":"RA-5.jpg","description":"Detail View 2 - Risk Analytics"},
-{"imgPath":"RA-6.jpg","description":"Detail View 3 - Risk Analytics"},
-{"imgPath":"360VIEW-1.jpg","description":"360 View 1 - Risk Analytics"},
-{"imgPath":"360VIEW-2.jpg","description":"361 View 2 - Risk Analytics"},
-{"imgPath":"NYNJTC_MockUp1.png","description":"Mockup screen 1 - New Yrok New Jersey Trail Conferense"},
-{"imgPath":"NYNJTC_MockUp2.png","description":"Mockup screen 2 - New Yrok New Jersey Trail Conferense"},
-{"imgPath":"100BEST-1.png","description":"Mockup screen 1 - 100 Best Mobile Project"},
-{"imgPath":"100BEST-2.png","description":"Mockup screen 2 - 100 Best Mobile Project"},
-{"imgPath":"WIREFRAME_100BEST.png","description":"Wire frame screen 2 - 100 Best Mobile Project"},
-{"imgPath":"Conrad.png","description":"Screen image Conrad - Controller Application"},
-{"imgPath":"wachovia.png","description":"Screen image Wachovia - Controller Application"},
-{"imgPath":"Exxon.png","description":"Screen image Exxon - Controller Application"},
-{"imgPath":"Doha.png","description":"Screen image Doha - Controller Application"},
-{"imgPath":"futuraUI.png","description":"High Fidelity Prototype for Futura UI"},
-{"imgPath":"My_Verizon.png","description":"Wire frame - Verizon Mobile Project"},
-{"imgPath":"ui-wirefrme-CAMPUSVIEW.png","description":"Wire frame - Campus View"},
-{"imgPath":"ui-wirefrme-changjoojeon.png","description":"Wire frame - Old Portfolio site"},
-{"imgPath":"Dashboard-KAFFE1668-1.png","description":"Prototype for Mobile Dashboard"},
-{"imgPath":"Dashboard-Verizon.png","description":"Prototype for Mobile Dashboard"}],
- "DESIGN":[{"imgPath":"SERVICE_TYPE_COLLECTION.png","description":"Icon for application"},
-{"imgPath":"CV_AD.jpg","description":"Advertisement"},
-{"imgPath":"CV_Brochure.png","description":"Brochure"},
-{"imgPath":"swiftCEC.jpg","description":"Brochure"},
-{"imgPath":"Qnomy1.jpg","description":"Presentation"},
-{"imgPath":"Qnomy2.jpg","description":"Presentation"},
-{"imgPath":"Qnomy3.jpg","description":"Presentation"},
-{"imgPath":"Qflow.jpg","description":"Brochure"},
-{"imgPath":"AD_Futura.png","description":"Advertisement"},
-{"imgPath":"collection1.jpg","description":"Illustration"},
-{"imgPath":"collection2.jpg","description":"Illustration"},
-{"imgPath":"collection3.jpg","description":"Illustration"},
-{"imgPath":"Gap1.jpg","description":"UI for Gap touchpad"},
-{"imgPath":"Gap2.jpg","description":"UI for Gap touchpad"}]
+ "UIUX": [
+  {
+   "category": "UWX",
+   "imgPath": "RA-1.png",
+   "description": "Landing page shows the whole list of client info. Landing page is clean and simple for loading time and visual hieravhy",
+   "detail1": "Invite friends / notification / user photo / menu",
+   "detail2": "Bookmark function",
+   "detail3": "Pagination"
+  },
+  {
+   "category": "UWX",
+   "imgPath": "RA-2.png",
+   "description": "This page delivers Risk index numbers for each category",
+   "detail1": "A simple shape is used for the main index number. When risk exists, the color of shape turns to orange",
+   "detail2": "Link to the detail page ",
+   "detail3": ""
+  },
+  {
+   "category": "UWX",
+   "imgPath": "RA-3.png",
+   "description": "Modal function is used so that the page does not move to other page.",
+   "detail1": "Icon implies the kind of risks",
+   "detail2": "Badge shows the number of current risks",
+   "detail3": ""
+  },
+  {
+   "category": "UWX",
+   "imgPath": "RA-4.png",
+   "description": "User can see all data about client. ",
+   "detail1": "Vertical navigation for categories ",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "UWX",
+   "imgPath": "RA-5.png",
+   "description": "Blue box are applied to show main index number",
+   "detail1": "",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "UWX",
+   "imgPath": "RA-6.png",
+   "description": "Micro interactios for specific functions",
+   "detail1": "",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "UWX",
+   "imgPath": "360VIEW-1.jpg",
+   "description": "360 View has a role to show main numeric data with graph and chart",
+   "detail1": "",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "UWX",
+   "imgPath": "360VIEW-2.jpg",
+   "description": "Main index info is inside of big shape",
+   "detail1": "",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "NYNJTC",
+   "imgPath": "NYNJTC_MockUp1.png",
+   "description": "This project is for New York New Jersey Trail Conference and focuses on search trail courses. It is done with IONIC framework and Angular JS.",
+   "detail1": "Splash screen",
+   "detail2": "Main menus",
+   "detail3": "Sub menus "
+  },
+  {
+   "category": "NYNJTC",
+   "imgPath": "NYNJTC_MockUp2.png",
+   "description": "",
+   "detail1": "Trail details",
+   "detail2": "Trail list that user chooses",
+   "detail3": "Trail schedule"
+  },
+  {
+   "category": "100BEST",
+   "imgPath": "WIREFRAME_100BEST.png",
+   "description": "This project is for 100 BEST which starts with an idea of setting 100 ranks about various cutural area interests",
+   "detail1": "",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "100BEST",
+   "imgPath": "100BEST-1.png",
+   "description": "",
+   "detail1": "Splash screen",
+   "detail2": "Main categories",
+   "detail3": "Sub categories for selected menu"
+  },
+  {
+   "category": "100BEST",
+   "imgPath": "100BEST-2.png",
+   "description": "",
+   "detail1": "List of 100 ranks",
+   "detail2": "Detailed info of selected item",
+   "detail3": ""
+  },
+  {
+   "category": "CAMPUSVIEW",
+   "imgPath": "conrad.png",
+   "description": "Interface design for elevator monitoring software. User can watch the status of elevators.",
+   "detail1": "Buttons for specific function",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "CAMPUSVIEW",
+   "imgPath": "wachovia.png",
+   "description": "",
+   "detail1": "Group area view",
+   "detail2": "List view of all areas",
+   "detail3": "This screen shows the detail of active group elevator"
+  },
+  {
+   "category": "CAMPUSVIEW",
+   "imgPath": "Exxon.png",
+   "description": "Main view for Exxon Mobil project",
+   "detail1": "User can get more data clicking an elevator icon",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "CAMPUSVIEW",
+   "imgPath": "Doha.png",
+   "description": "",
+   "detail1": "Overview of the whole building",
+   "detail2": "This frame shows grid view of active area",
+   "detail3": ""
+  },
+  {
+   "category": "CAMPUSVIEW",
+   "imgPath": "futuraUI.png",
+   "description": "User interface designs for controller monitor. Gray and blue are used for main color scheme. It is a small screen so buttons are quite big.",
+   "detail1": "",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "CAMPUSVIEW",
+   "imgPath": "ui-wirefrme-CAMPUSVIEW.png",
+   "description": "Wire frame - Campus View",
+   "detail-1": "",
+   "detail-2": "",
+   "detail-3": ""
+  },
+  {
+   "category": "DASHBOARD",
+   "imgPath": "Dashboard-KAFFE1668-1.png",
+   "description": "Prototype for Mobile Dashboard",
+   "detail-1": "Graph and chart are the main elements for delivering data and info on dashboard",
+   "detail-2": "",
+   "detail-3": ""
+  },
+  {
+   "category": "DASHBOARD",
+   "imgPath": "Dashboard-Verizon.png",
+   "description": "Prototype for Mobile Dashboard",
+   "detail1": "This prototype is created with Adobe Photoshop & Illustrator",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "WIREFRAMES",
+   "imgPath": "My_Verizon.png",
+   "description": "Wire frame - Verizon Mobile Project",
+   "detail1": "Wireframe is done with Balsamiq",
+   "detail2": "",
+   "detail3": ""
+  },
+  {
+   "category": "WIREFRAMES",
+   "imgPath": "ui-wirefrme-changjoojeon.png",
+   "description": "Wire frame - Old Portfolio site",
+   "detail1": "",
+   "detail2": "",
+   "detail3": ""
+  }
+],
+ "DESIGN": [{
+   "imgPath": "SERVICE_TYPE_COLLECTION.png",
+   "description": "Icon for application"
+  },
+  {
+   "imgPath": "CV_AD.jpg",
+   "description": "Advertisement"
+  },
+  {
+   "imgPath": "CV_Brochure.png",
+   "description": "Brochure"
+  },
+  {
+   "imgPath": "swiftCEC.jpg",
+   "description": "Brochure"
+  },
+  {
+   "imgPath": "Qnomy1.jpg",
+   "description": "Presentation"
+  },
+  {
+   "imgPath": "Qnomy2.jpg",
+   "description": "Presentation"
+  },
+  {
+   "imgPath": "Qnomy3.jpg",
+   "description": "Presentation"
+  },
+  {
+   "imgPath": "Qflow.jpg",
+   "description": "Brochure"
+  },
+  {
+   "imgPath": "AD_Futura.png",
+   "description": "Advertisement"
+  },
+  {
+   "imgPath": "collection1.jpg",
+   "description": "Illustration"
+  },
+  {
+   "imgPath": "collection2.jpg",
+   "description": "Illustration"
+  },
+  {
+   "imgPath": "collection3.jpg",
+   "description": "Illustration"
+  },
+  {
+   "imgPath": "Gap1.jpg",
+   "description": "UI for Gap touchpad"
+  },
+  {
+   "imgPath": "Gap2.jpg",
+   "description": "UI for Gap touchpad"
+  }]
 }
