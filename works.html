@@ -5,23 +5,35 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title> Works</title>
+
+
  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">-->
  <link rel="stylesheet" type="text/css" href="css/main.css">
  <link rel="stylesheet" type="text/css" href="css/navigation.css">
  <link rel="stylesheet" type="text/css" href="css/slider.css">
  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen">
  <script src="js/jquery-2.1.4.min.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-animate.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-touch.min.js"></script>
+ <!-- <script src="js/bootstrap.min.js"></script>-->
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>-->
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-animate.min.js"></script>-->
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-touch.min.js"></script>-->
+ <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-route.min.js"></script> -->
+ <!-- <script src="js/angular-ui-router.min.js"></script>-->
+ <!-- <script src="js/ui-bootstrap-0.14.3.min.js"></script>-->
  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
- <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
  <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
- <script src="js/general-function.js"></script>
- <script src="js/app.js"></script>
+ <script type="text/javascript" src="js/lodash.js"></script>
+ <script type="text/javascript" src="js/general-function.js"></script>
+ <!-- <script type="text/javascript" src="js/app.js"></script>-->
+ <!-- <script type="text/javascript" src="js/directive.js"></script>-->
+ <!-- <script type="text/javascript" src="js/subtab-rout.js"></script>-->
+
+
 </head>
 
-<body ng-app="app">
+<body>
  <div class="container">
   <header id="masthead" class="main-header" role="banner">
    <div class="main-header_inner">
@@ -39,7 +51,9 @@
   </header>
 
   <div class="main-body">
+
    <h3>Works</h3>
+
    <div class="tabs">
     <ul class="tab-links">
      <li class="active"><a href="#tab1">UI / UX</a></li>
@@ -52,127 +66,52 @@
      <div id="tab1" class="tab active">
       <div class="main-content">
 
+       <div class="subtabs flex-container">
+        <ul class="subtab-links">
+         <li class="active"><a href='#subtab1'>UWX</a></li>
+         <li><a href='#subtab2'>NYNJTC</a></li>
+         <li><a href='#subtab3'>100BEST</a></li>
+         <li><a href='#subtab4'>CAMPUSVIEW</a></li>
+         <li><a href='#subtab5'>DASHBOARD</a></li>
+         <li><a href='#subtab6'>WIREFRAMES</a></li>
+        </ul>
+        <div class="subtab-content">
+         <div id="subtab1" class="subtab active">
 
-
-       <div class="container flex-container" ng-controller="slideCtrl as vm">
-        <div class="subtabs flex-container" id="subtab_navi">
-         <ul class="subtab-links">
-          <li class="active"><a href="#subtab1">UWX</a></li>
-          <li><a href="#subtab2">NYNJTC</a></li>
-          <li><a href="#subtab3">100BEST</a></li>
-          <li><a href="#subtab4">CAMPUSVIEW</a></li>
-          <li><a href="#subtab5">DASHBOARD</a></li>
-          <li><a href="#subtab6">WIREFRAMES</a></li>
-         </ul>
-         <div class="subtab-content">
-          <div id="subtab1" class="subtab active">
-          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'UWX'">
-           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
-           <ul class="rightArticle">
-            <li>{{slide.description}}</li>
-            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
-            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
-            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
-           </ul>
-          </div>
-
-          
          </div>
-         <div id="subtab2" class="subtab">
-          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'NYNJTC'">
-           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
-           <ul class="rightArticle">
-            <li>{{slide.description}}</li>
-            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
-            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
-            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
-           </ul </div>
+         <div id="subtab2" class="subtab ">
 
-          
-          </div>
-          <div id="subtab3" class="subtab">
-          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'100BEST'">
-           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
-           <ul class="rightArticle">
-            <li>{{slide.description}}</li>
-            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
-            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
-            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
-           </ul </div>
+         </div>
+         <div id="subtab3" class="subtab ">
 
-           
-          </div>
          </div>
-         
-         <div id="subtab4" class="subtab">
-          <div class="imgHolder " ng-repeat="slide in vm.slides | filter:'CAMPUSVIEW'">
-           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
-           <ul class="rightArticle">
-            <li>{{slide.description}}</li>
-            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
-            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
-            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
-           </ul </div>
+         <div id="subtab4" class="subtab ">
 
-           
-          </div>
          </div>
-         
-         <div id="subtab5" class="subtab">
-          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'DASHBOARD'">
-           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
-           <ul class="rightArticle">
-            <li>{{slide.description}}</li>
-            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
-            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
-            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
-           </ul </div>
+         <div id="subtab5" class="subtab ">
 
-           
-          </div>
          </div>
-         
-         <div id="subtab6" class="subtab">
-          <div class="imgHolder" ng-repeat="slide in vm.slides | filter:'WIREFRAMES'">
-           <img ng-src="images/{{slide.imgPath}}" class="imgWidth">
-           <ul class="rightArticle">
-            <li>{{slide.description}}</li>
-            <li ng-hide="!slide.detail1">{{slide.detail1}}</li>
-            <li ng-hide="!slide.detail2">{{slide.detail2}}</li>
-            <li ng-hide="!slide.detail3">{{slide.detail3}}</li>
-           </ul </div>
+         <div id="subtab6" class="subtab ">
 
-           
-          </div>
          </div>
-         
-         </div>
+
+
         </div>
+
+
        </div>
+
+
       </div>
-     </div>
 
      </div>
 
 
 
      <div id="tab2" class="tab">
-      <div class="main-content">
+      <div class="main-content imageCenter">
+       <a class="fancybox" href="../images/buttonImageDesign.png" id="designButton"><img src="../images/buttonImageDesign.png" alt="" /></a>
 
-
-       <div class="container slider" ng-controller="designCtrl as dm">
-
-        <span ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" autocorrect="" class="slide-label">{{design.description}}</span>
-        <img ng-repeat="design in dm.slidesDesign" ng-hide="!dm.isCurrentSlideIndex($index)" ng-src="images/{{design.imgPath}}" class="slide slide-animation nonDraggableImage">
-
-
-
-        <a class="arrow prev" href="#" ng-click="dm.nextSlide()"></a>
-        <a class="arrow next" href="#" ng-click="dm.prevSlide()"></a>
-
-
-
-       </div>
 
       </div>
      </div>
@@ -211,18 +150,18 @@
       <div class="main-content">
        <div class="section-1" style="border-right:none">
 
-        <a class="fancybox-media" href="http://vimeo.com/35119237" title="motion graphic demo movie" rel="group1">
+        <a class="fancybox-media" href="http://vimeo.com/35119237" title="motion graphic demo movie" rel="group1" style="display:block;">
          <button type="submit" class="buttonRed">MOTION GRAPHICS PORTFOLIO</button>
         </a>
-        <a class="fancybox-media" href="http://vimeo.com/26409169" title="promotion for cosmetic brand" rel="group2">
+        <a class="fancybox-media" href="http://vimeo.com/26409169" title="promotion for cosmetic brand" rel="group2" style="display:block;">
          <button type="submit" class="buttonRed">PROMOTION FOR COSMETIC BRAND</button>
         </a>
        </div>
        <div class="section-2">
-        <a class="fancybox-media" href="http://vimeo.com/31254059" title="promotion reel for church event" rel="group3">
+        <a class="fancybox-media" href="http://vimeo.com/31254059" title="promotion reel for church event" rel="group3" style="display:block;">
          <button type="submit" class="buttonRed">PROMOTION REEL FOR CHURCH EVENT</button>
         </a>
-        <a class="fancybox-media" href="http://vimeo.com/35118402" title="promotion reel for lipstick brand" rel="group4">
+        <a class="fancybox-media" href="http://vimeo.com/35118402" title="promotion reel for lipstick brand" rel="group4" style="display:block;">
          <button type="submit" class="buttonRed">PROMOTION FOR LIPSTICK BRAND</button>
         </a>
 
@@ -230,24 +169,25 @@
 
       </div>
      </div>
-<!--    </div>-->
-   </div>
-  </div>
 
-
-
-  <div id="nav-menu" class="overlay-scale">
-   <div>
-    <ul>
-     <li><a href="index.html">HOME</a></li>
-     <li><a href="skill.html">SKILLS</a></li>
-     <li><a href="experience.html">EXPERIENCES</a></li>
-     <li><a href="works.html">WORK</a></li>
-    </ul>
+    </div>
    </div>
 
-  </div>
 
+
+   <div id="nav-menu" class="overlay-scale">
+    <div>
+     <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="skill.html">SKILLS</a></li>
+      <li><a href="experience.html">EXPERIENCES</a></li>
+      <li><a href="works.html">WORK</a></li>
+     </ul>
+    </div>
+
+   </div>
+  </div>
+ </div>
 </body>
 
 </html>

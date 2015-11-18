@@ -119,7 +119,7 @@ li.active a:hover {
 }
 
 .main-content  li {
-/* padding: 15px;*/
+ padding: 10px 0;
  letter-spacing: 1.3px;
 }
 /*-------subtab content-------*/
@@ -180,26 +180,9 @@ li.active a:hover {
  display: inline-block;
  border: thin solid #ccc;
 }
-.rightArticle{
- display: inline-block;
- padding: 0 0 0 5px;
- width: 15%;
- font-size: .9em;
- vertical-align: top;
-}
-.rightArticle li{
- letter-spacing: 0;
-}
 
-.rightArticle li:first-of-type{
- margin-bottom: 10px;
-}
-
-.rightArticle li:not(:first-child){
- margin-bottom: 10px;
-}
-.rightArticle li:not(:first-child):before {
- padding: 1px 6px;
+.rightArticle li:before {
+ padding: 0px 2px 0px 4px;
  color: darkorange;
  border: 2px solid;
  border-radius: 12px;
@@ -208,20 +191,20 @@ li.active a:hover {
  margin-right: 5px;
  font-weight: bold;
 }
-.rightArticle li:nth-of-type(2):before {
+.rightArticle li:nth-of-type(1):before {
  content: '1';
  
 }
-.rightArticle li:nth-of-type(3):before {
+.rightArticle li:nth-of-type(2):before {
  content: '2';
  
 }
-.rightArticle li:nth-of-type(4):before {
+.rightArticle li:nth-of-type(3):before {
  content: '3';
  
 }
 .subtab-content {
- padding: 0;
+ padding: 0 0 0 10px;
  flex: 7;
 }
 
@@ -231,6 +214,47 @@ li.active a:hover {
 
 .subtab.active {
  display: block;
+}
+
+.imageFull{
+ width: 100%;
+ height: 100%;
+}
+
+.subtabContainer{
+ margin-bottom: 20px;
+}
+.subtabContainer img{
+ flex:5;
+ border: thin solid gray;
+}
+.subtabContainer>div{
+ 
+ flex:1;
+}
+.subtabContainer .description{
+ padding-left: 5px;
+ font-size: .9em;
+}
+.detailList{
+ padding-left: 10px;
+ font-size: .8em;
+
+}
+
+.right, .left{
+ flex: 1;
+}
+.left>img,.right>img{
+ flex: 1;
+}
+.left .description, .right .description{
+ flex: 1;
+}
+
+
+.hidden {
+    display: none;
 }
 /*----- Content of Tabs -----*/
 
@@ -270,7 +294,7 @@ li.active a:hover {
 
 
 .main-content ul,
-.main-content-list ul {
+.main-content-list ul, .subtab {
  animation: fade 2s;
  -webkit-animation: fade 2s;
 }
@@ -331,6 +355,14 @@ li.active a:hover {
  background-color: #4d4d4d!important;
 }
 
+#designButton{
+ margin: 20px auto;
+ border: thin solid gray;
+ height: 302px;
+}
+#designButton img:hover{
+ opacity: .8;
+}
 
 /*-----------EXPERIENCE---------------------*/
 

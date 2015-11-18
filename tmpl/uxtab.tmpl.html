@@ -1,0 +1,11 @@
+<div class="imgHolder" ng-repeat="item in items">
+           <img ng-src="images/{{item.imgPath}}" class="imgWidth">
+           <ul class="rightArticle">
+
+            <li>{{item.description}}</li>
+            <li ng-hide="!item.detail1">{{item.detail1}}</li>
+           <li ng-hide="!item.detail2">{{item.detail2}}</li>
+            <li ng-hide="!item.detail3">{{item.detail3}}</li>
+
+           </ul>
+</div>
